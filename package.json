@@ -1,0 +1,16 @@
+{
+  "name": "syntheses_conventions_collectives",
+  "version": "1.0.0",
+  "description": "Install python virtual env lib if not exists",
+  "main": "index.js",
+  "scripts": {
+    
+    "scrap": "python src/scrapping_travail_emploi.py",
+    "start": "npm run scrap",
+    "venv": "virtualenv -p python3 venv ; chmod +x venv/bin/activate; source ./venv/bin/activate ",
+    "install": "pip install -r src/requirements.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

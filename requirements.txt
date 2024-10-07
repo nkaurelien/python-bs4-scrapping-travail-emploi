@@ -1,0 +1,8 @@
+python-dotenv
+beautifulsoup4
+requests
+pdfkit
+python-slugify
+xmltodict
+markdownify
+markdown

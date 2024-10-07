@@ -1,0 +1,7 @@
+.cache/
+.idea/
+chunk*/
+out*/
+.env*.local
+.env
+yarn*
