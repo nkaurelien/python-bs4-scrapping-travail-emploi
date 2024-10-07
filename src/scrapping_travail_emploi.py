@@ -35,9 +35,6 @@ class CustomMarkdownConverter(MarkdownConverter):
     Create a custom MarkdownConverter that adds two newlines after an image
     """
     def convert_img(self, el, text, convert_as_inline):
-        # el['src']  = base_url + el['src']
-        # print(el['src'], get_as_base64(el['src']))
-        # exit()
         return super().convert_img(el, text, convert_as_inline) + '\n\n' if text else ''
 
 # Create shorthand method for conversion
@@ -102,9 +99,6 @@ def parse_urls():
         new_aside_links = list(result)   
         url['menu_links'] = [{'loc': link.get("href") if link.get("href") .startswith(base_url) else base_url + link.get("href") , 'text': link.string.strip()} for link in new_aside_links]
         
-        # print(json.dumps(url['menu_links'], indent=4), '\n\n')
-        
-      
 
 
 def get_as_base64(url):
@@ -170,9 +164,5 @@ if __name__ == "__main__":
     parse_urls()
     
     # print(json.dumps(target_urls, indent=4), '\n\n')
-    
-    # print(target_urls)
-    
-    # print(target_urls)
 
     scrap_site_links_to_md(target_urls)
